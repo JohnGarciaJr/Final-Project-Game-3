@@ -1,3 +1,4 @@
+// EXTRA LEVEL UP - Added some functions for a Winning message and play again button at line 257 down below.
 
 /***  appendNewCard(parentElement)  <----- START HERE!
 
@@ -234,6 +235,7 @@ function onCardFlipped(newlyFlippedCard) {
   // Step 5: Play either the win audio or match audio based on whether the user has the number of matches needed to win.
   if (counters["matchCounter"] == 6) {
     winAudio.play();
+    showMessage("win-message");
   }
   else {
     matchAudio.play();
@@ -252,3 +254,17 @@ if (cardObjects != null) {
     flipCardWhenClicked(cardObjects[i]);
   }
 }
+// Added showMesage() to add a winning message after the player has won a game
+function showMessage(id) {
+  let message = document.getElementById(id);
+  if (message != null) {
+    message.classList.remove("hidden");
+  } else {
+    console.log(`%{id} does not exist.`);
+  }
+}
+// Added this refreshPage() to refresh the page to start a new game.
+function refreshPage() {
+    window.location.reload();
+} 
+// runAllTests();

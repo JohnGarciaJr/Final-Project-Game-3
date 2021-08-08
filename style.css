@@ -1,9 +1,9 @@
-
+/* hidden class and message container added for play again button on line 118 down below */
 :root {
   --card-width: 125px;
   --card-height: 175px;
 }
-
+/* hotrod red color scheme for Iron Man colors */
 body {
   margin: 0;
   background: url(img/IronMan-bg.gif);
@@ -17,6 +17,11 @@ body {
 
 h1 {
   font-size: 60px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 10px;
   text-align: center;
 }
 
@@ -65,7 +70,7 @@ h1 {
   border-radius: 5px;
   transition-duration: .3s;
 }
-
+/* Back of card image changed for the Iron Man theme */
 .card-down {
   background-image: url(img/BackOfCard.jpg);
   background-position: center;
@@ -89,7 +94,7 @@ h1 {
 .image-1 .card-up {
   background-image: url(img/IronMan-1.jpg), linear-gradient(#72dbf4, #72dbf4);
 }
-
+/* All images changed for the Iron Man theme */
 .image-2 .card-up {
   background-image: url(img/IronMan-2.jpg), linear-gradient(#72dbf4, #72dbf4);
 }
@@ -108,4 +113,13 @@ h1 {
 
 .image-6 .card-up {
   background-image: url(img/IronMan-6.jpg), linear-gradient(#72dbf4, #72dbf4);
+}
+/* Here is the added css styling for the play again feature after a player has won the game. */
+.hidden {
+  display: none;
+}
+
+#message-container {
+  text-align: center;
+  font-size: 80px;
 }
