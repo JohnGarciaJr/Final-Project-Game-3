@@ -231,7 +231,10 @@ function onCardFlipped(newlyFlippedCard) {
   // Step 4: Increment the match counter and optionally add a "glow" effect to the matching cards.
   incrementCounter("matchCounter", document.getElementById("match-count"));
   lastCardFlipped.element.classList.add("match");
+  lastCardFlipped.element.classList.add("glow");
   newlyFlippedCard.element.classList.add("match");
+  newlyFlippedCard.element.classList.add("glow");
+
   // Step 5: Play either the win audio or match audio based on whether the user has the number of matches needed to win.
   if (counters["matchCounter"] == 6) {
     winAudio.play();
